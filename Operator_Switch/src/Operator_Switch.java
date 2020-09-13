@@ -6,26 +6,26 @@ public class Operator_Switch {
 		float a, b;
 		String op;
 		System.out.println("연산");
-		Scanner scanner = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in); //연산 입력
 		a = scanner.nextFloat();
 		op = scanner.next();
 		b = scanner.nextFloat();
 		
 		switch(op) {
 		case "+":
-			System.out.println(a + " + " + b + "의 연산 결과는 " + (a+b));
-			break;
+			System.out.println(a + op + b + "의 연산 결과는 " + (a+b));
+			break; //연산자가 +이면 더하기 연산 후 벗어남
 		case "-":
-			System.out.println(a + " - " + b + "의 연산 결과는 " + (a-b));
-			break;
+			System.out.println(a + op + b + "의 연산 결과는 " + (a-b));
+			break; //연산자가 -이면 빼기 연산 후 벗어남
 		case "*":
-			System.out.println(a + " * " + b + "의 연산 결과는 " + (a*b));
-			break;
+			System.out.println(a + op + b + "의 연산 결과는 " + (a*b));
+			break; //연산자가 *이면 곱하기 연산 후 벗어남
 		case "/":
-			if(b==0) { System.out.println("0으로 나눌 수 없습니다."); }
+			if(b==0) { System.out.println("0으로 나눌 수 없습니다."); } //연산자가 /이고 b가 0이면 오류 출력
 			else {
-				System.out.println(a + " / " + b + "의 연산 결과는 " + (a/b));
-				break;
+				System.out.println(a + op + b + "의 연산 결과는 " + (a/b));
+				break;//b가 0이 아니면 나눗셈 연산 수행 후 벗어남
 			}
 		}
 		
