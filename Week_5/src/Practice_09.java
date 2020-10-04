@@ -4,10 +4,10 @@ interface PhoneInterface2{
 	final int TIMEOUT = 10000; //상수 필드
 	void sendCall(); //추상 메소드
 	void receiveCall(); //추상 메소드
-	default void printLofo() {System.out.println("** Phone **");} //ㄷ폴트 메소드
+	default void printLogo() {System.out.println("** Phone **");} //디폴트 메소드
 }
 
-interface MobilePhoneInterface extends PhoneInterface{
+interface MobilePhoneInterface extends PhoneInterface2{
 	void sendSMS();
 	void receiveSMS();
 }
@@ -49,7 +49,7 @@ public class Practice_09 {
 		phone.printLogo();
 		phone.sendCall();
 		phone.play();
-		System.out.println("3과 5를 더하면" + phone.calculate(3, 5));
+		System.out.println("3과 5를 더하면 " + phone.calculate(3, 5));
 		phone.schedule();
 	}
 }

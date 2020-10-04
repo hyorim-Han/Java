@@ -4,7 +4,7 @@ interface PhoneInterface{
 	final int TIMEOUT = 10000; //상수 필드
 	void sendCall(); //추상 메소드
 	void receiveCall(); //추상 메소드
-	default void printLogo() { System.out.println("** Phobe **"); }; //디폴트 메소드
+	default void printLogo() { System.out.println("** Phone **"); }; //디폴트 메소드
 }
 
 class SamsungPhone implements PhoneInterface{
